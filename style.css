@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --White: hsl(0, 100%, 100%);
+    --Purple100: hsl(275, 100%, 97%);
+    --Purple600: hsl(292, 16%, 49%);
+    --Purple950: hsl(292, 42%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: hsl(275, 100%, 97%);
+}
+
+.card {
+    max-width: 400px;
+    background-color: hsl(0, 100%, 100%);
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 20px;
+}
+
+.card .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 10px;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+
+    h4 {
+        width: 80%;
+        color: var(--Purple950);
+    }
+
+    button {
+        background: none;
+        outline: none;
+        border: none;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    .paragraph {
+        display: none;
+        line-height: 1.6rem;
+        color: var(--Purple600);
+    }
+}
+
+.show .paragraph {
+    display: block;
+}
+
+.tile:nth-of-type(-n+3) {
+    border-bottom: 1px solid #80808059;
+}
