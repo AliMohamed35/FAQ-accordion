@@ -4,7 +4,7 @@
     --White: hsl(0, 100%, 100%);
     --Purple100: hsl(275, 100%, 97%);
     --Purple600: hsl(292, 16%, 49%);
-    --Purple950: hsl(292, 42%, 14%);
+    --Purple950: hsl(292, 51.20%, 33.70%);
 }
 
 * {
@@ -46,6 +46,9 @@ body {
 
     h4 {
         width: 80%;
+    }
+
+    h4:hover {
         color: var(--Purple950);
     }
 
@@ -63,14 +66,18 @@ body {
     }
 
     .paragraph {
-        display: none;
-        line-height: 1.6rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+        opacity: 0;
         color: var(--Purple600);
     }
 }
 
-.show .paragraph {
-    display: block;
+.paragraph.show {
+    max-height: 500px;
+    /* adjust as needed depending on content */
+    opacity: 1;
 }
 
 .tile:nth-of-type(-n+3) {
